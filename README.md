@@ -4,11 +4,13 @@ Prime Experts Cleaning is a premium cleaning service website designed to showcas
 
 ## ✨ Features
 
-- **Modern & Responsive Design**: A fully responsive layout that looks great on all devices.
+- **Modern & Responsive Design**: A fully responsive layout optimized for mobile, tablets, and desktops.
+- **Premium Mobile Navigation**: Full-screen mobile menu with glassmorphism effects and staggered entrance animations.
+- **Adaptive UI Components**: Redesigned Footer, Coverage, and About sections for a seamless experience on any screen size.
 - **Premium Services Showcase**: Highlighting a wide range of services including Residential, Commercial, Post-Construction, Airbnb turnovers, and more.
-- **Interactive Gallery**: High-quality visual representation of completed projects.
+- **Interactive Gallery**: High-quality visual representation of completed projects with responsive grid adjustments.
 - **Smooth Animations**: Powered by Framer Motion for a premium feels.
-- **Service Coverage Information**: Clear details on areas served.
+- **Service Coverage Information**: Clear details on areas served with interactive elements.
 - **Contact Integration**: Easy-to-use contact sections for lead generation.
 
 ## 🛠️ Tech Stack
