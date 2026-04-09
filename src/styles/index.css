@@ -156,7 +156,7 @@ button {
   display: flex;
   align-items: center;
   position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)), url('/hero.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3)), url('../../public/hero.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax effect for premium feel */

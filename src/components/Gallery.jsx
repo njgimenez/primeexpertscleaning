@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const initialImages = [
-  { url: '/gallery/clean_kitchen.png', title: 'Luxury Kitchen Deep Clean' },
-  { url: '/gallery/office_cleaning.png', title: 'Premium Office Services' },
-  { url: '/gallery/window_cleaning.png', title: 'Window Excellence' },
-  { url: '/gallery/carpet_cleaning.png', title: 'Industrial Carpet Care' },
-  { url: '/gallery/airbnb_cleaning.png', title: 'Airbnb turnover' },
-  { url: '/gallery/post_construction.png', title: 'Post-Construction' }
+  { url: `${import.meta.env.BASE_URL}gallery/clean_kitchen.png`, title: 'Luxury Kitchen Deep Clean' },
+  { url: `${import.meta.env.BASE_URL}gallery/office_cleaning.png`, title: 'Premium Office Services' },
+  { url: `${import.meta.env.BASE_URL}gallery/window_cleaning.png`, title: 'Window Excellence' },
+  { url: `${import.meta.env.BASE_URL}gallery/carpet_cleaning.png`, title: 'Industrial Carpet Care' },
+  { url: `${import.meta.env.BASE_URL}gallery/airbnb_cleaning.png`, title: 'Airbnb turnover' },
+  { url: `${import.meta.env.BASE_URL}gallery/post_construction.png`, title: 'Post-Construction' }
 ];
 
 const moreImages = [

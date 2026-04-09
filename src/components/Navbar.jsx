@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
         <div className="logo">
-          <img src="/logo.jpeg" alt="Prime Experts Cleaning LLC" />
+          <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Prime Experts Cleaning LLC" />
         </div>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
