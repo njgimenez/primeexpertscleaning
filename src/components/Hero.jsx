@@ -12,16 +12,27 @@ const Hero = () => {
           className="hero-content"
           style={{ position: 'relative', zIndex: 2 }}
         >
-          <span style={{ color: 'var(--accent)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem', display: 'block', marginBottom: '1rem' }}>
+          <span style={{ 
+            background: 'rgba(255, 255, 255, 0.8)', 
+            color: '#031334', 
+            fontWeight: '900', 
+            textTransform: 'uppercase', 
+            letterSpacing: '0.2em', 
+            fontSize: '0.85rem', 
+            display: 'inline-block', 
+            marginBottom: '1.5rem',
+            padding: '4px 16px',
+            borderRadius: '4px'
+          }}>
             Premium Cleaning Services
           </span>
-          <h1 style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Expert Care for <br />Your Prime Spaces.</h1>
-          <p style={{ color: '#0f172a', fontWeight: '700', maxWidth: '550px' }}>
+          <h1 style={{ marginBottom: '1.5rem' }}>Expert Care for <br />Your Prime Spaces.</h1>
+          <p style={{ color: 'var(--text-main)', opacity: 0.9, fontWeight: '500', maxWidth: '550px' }}>
             Experience the gold standard in cleanliness. We don't just clean; we restore, protect, and elevate your environment with unmatched precision.
           </p>
           <div className="hero-btns" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginTop: '2.5rem' }}>
             <a href="#contact" className="btn-primary">Start Your Experience</a>
-            <a href="#services" style={{ fontWeight: '800', color: 'var(--navy)', borderBottom: '3px solid var(--accent)', paddingBottom: '4px' }}>Explore Services</a>
+            <a href="#services" style={{ fontWeight: '800', color: 'var(--text-main)', borderBottom: '3px solid var(--accent)', paddingBottom: '4px' }}>Explore Services</a>
           </div>
         </motion.div>
       </div>
