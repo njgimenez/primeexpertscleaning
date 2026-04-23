@@ -24,7 +24,7 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <div className="footer-contact">
               <p>Arizona, USA</p>
-              <p>info@primeexpertscleaning.com</p>
+              <p>primeexperts@primeexpertscleaning.com</p>
               <p className="footer-hours">M-F: 8am - 6pm</p>
             </div>
           </div>

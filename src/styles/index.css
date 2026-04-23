@@ -469,6 +469,14 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
 }
 
 .gallery-item {
