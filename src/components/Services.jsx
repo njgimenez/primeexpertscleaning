@@ -52,10 +52,20 @@ const Services = () => {
   return (
     <section id="services" style={{ background: 'var(--navy)', padding: '8rem 0' }}>
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>What We Offer</span>
-          <h2 style={{ color: 'var(--white)', fontSize: '2.5rem', marginBottom: '1rem' }}>Our Premium Services</h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-muted)' }}>
+        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+          <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>
+            What We Offer
+          </span>
+          <h2 style={{ color: 'var(--white)', fontSize: '3.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-prata)' }}>
+            <span className="accent-script" style={{ display: 'block', fontSize: '1.2em' }}>Crafting excellence</span>
+            Our Premium Services
+            <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', margin: '1rem auto', width: '100%', maxWidth: '250px' }}>
+              <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+              <span style={{ color: 'var(--gold)', fontSize: '1.3rem' }}>✦</span>
+              <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+            </span>
+          </h2>
+          <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: '1.8' }}>
             We proudly offer a wide range of services to meet your needs, from routine maintenance to deep, detailed cleans.
           </p>
         </div>

@@ -26,10 +26,15 @@ const Hero = () => {
             ✦ Premium Cleaning Services ✦
           </span>
           <h1>
-            <span className="accent-script">Your home deserves</span>
-            Expert Care for <br />Your Prime Spaces.
+            <span className="accent-script" style={{ display: 'block', textAlign: 'center' }}>Your home deserves</span>
+            <span className="main-title" style={{ display: 'block', textAlign: 'center' }}>EXPERT <br />Cleaning</span>
+            <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', margin: '0.5rem auto', width: '100%', maxWidth: '250px' }}>
+              <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+              <span style={{ color: 'var(--gold)', fontSize: '1.3rem' }}>✦</span>
+              <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+            </span>
           </h1>
-          <p style={{ color: 'var(--text-light)', fontWeight: '500', maxWidth: '550px' }}>
+          <p style={{ textAlign: 'center', color: 'var(--text-light)', fontWeight: '500', maxWidth: '550px' }}>
             Experience the gold standard in cleanliness. We don't just clean; we restore, protect, and elevate your environment with unmatched precision.
           </p>
           <div className="hero-btns" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>

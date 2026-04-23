@@ -113,8 +113,16 @@ const ServicesPage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="header-content"
           >
-            <h1>Our Specialized Cleaning Services</h1>
-            <p>From routine maintenance to complex restoration, we provide top-tier cleaning solutions tailored to your specific needs.</p>
+            <h1 style={{ fontFamily: 'var(--font-prata)', fontSize: '4rem', marginBottom: '1.5rem' }}>
+              <span className="accent-script" style={{ display: 'block', fontSize: '1.2em' }}>Excellence in every detail</span>
+              Our Specialized Cleaning Services
+              <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', margin: '1rem auto', width: '100%', maxWidth: '300px' }}>
+                <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+                <span style={{ color: 'var(--gold)', fontSize: '1.5rem' }}>✦</span>
+                <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
+              </span>
+            </h1>
+            <p style={{ fontSize: '1.3rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto' }}>From routine maintenance to complex restoration, we provide top-tier cleaning solutions tailored to your specific needs.</p>
           </motion.div>
         </div>
       </header>
@@ -122,44 +130,44 @@ const ServicesPage = () => {
       <section className="services-detail section-padding">
         <div className="container">
           {services.map((service, index) => (
-            <div
-              id={service.id}
-              key={service.id}
-              className={`service-detail-item ${index % 2 === 0 ? '' : 'reverse'}`}
-            >
-              <motion.div
-                className="service-detail-content"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-              >
-                <div className="service-header">
-                  <span className="service-icon-large" style={{ color: 'var(--accent)' }}>{service.icon}</span>
-                  <h2 style={{ color: 'var(--text-main)' }}>{service.title}</h2>
+            <div id={service.id} key={service.id} className={`service-detail-card ${index % 2 !== 0 ? 'reverse' : ''}`}>
+              <div className="service-detail-grid">
+                {/* Left Column: Text & Features */}
+                <div className="service-detail-text">
+                  <div className="service-icon-box">
+                    {service.icon}
+                  </div>
+                  <h2 className="service-title-large">{service.title}</h2>
+                  <p className="service-full-desc">{service.fullDesc}</p>
+
+                  <ul className="service-features-list">
+                    {service.features.map((feature, fIndex) => (
+                      <li key={fIndex}>
+                        <CheckCircle2 size={18} className="feature-check" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="service-action">
+                    <a href="#contact" className="btn-primary btn-gold-to-orange">BOOK THIS SERVICE</a>
+                  </div>
                 </div>
-                <p className="service-full-desc" style={{ color: 'var(--text-muted)' }}>{service.fullDesc}</p>
-                <ul className="service-features" style={{ color: 'var(--text-main)' }}>
-                  {service.features.map((feature, fIndex) => (
-                    <li key={fIndex}>
-                      <CheckCircle2 size={20} className="feature-icon" style={{ color: 'var(--accent)' }} />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact" className="btn-primary">Book This Service</a>
-              </motion.div>
-              <motion.div
-                className="service-detail-image"
-                initial={{ opacity: 0, x: index % 2 === 0 ? 40 : -40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 + 0.1 }}
-              >
-                <img 
-                  src={`${import.meta.env.BASE_URL}gallery/${service.image}`} 
-                  alt={service.title} 
-                  className="rounded-image shadow-lg"
-                />
-              </motion.div>
+
+                {/* Right Column: Image */}
+                <div className="service-detail-img-container">
+                  <motion.div
+                    whileHover={{ scale: 1.05, y: -10 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}gallery/${service.image}`}
+                      alt={service.title}
+                      className="service-main-image"
+                    />
+                  </motion.div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
