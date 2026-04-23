@@ -217,6 +217,28 @@ button {
   overflow: hidden;
 }
 
+.page-header {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  background: var(--navy-dark);
+  padding-top: 140px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -345,33 +367,59 @@ button {
 /* ========================================
    BRAND IDENTITY - Premium dark section
    ======================================== */
-.brand-identity {
-  padding: 8rem 0;
-  background: var(--navy) !important;
+.brand-identity-wrapper {
+  overflow: hidden;
+}
+
+.logo-section {
+  background: #ffffff;
+  padding: 6rem 0 0;
   text-align: center;
   position: relative;
-  z-index: 1;
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
 }
 
-.brand-identity img {
-  max-width: 450px;
+.logo-full img {
+  max-width: 500px;
   height: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.brand-identity h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--white);
+.mountain-divider {
+  position: relative;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.brand-identity p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.2rem;
+.mountain-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 120px;
+}
+
+.brand-content-section {
+  padding: 4rem 0 8rem;
+  background: var(--navy);
+  text-align: center;
+}
+
+.brand-text {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.brand-motto {
+  font-weight: 800;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1rem;
 }
 
 /* ========================================
@@ -384,26 +432,33 @@ button {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
 }
 
 .gallery-item {
   position: relative;
-  height: 350px;
-  border-radius: var(--radius-md);
+  aspect-ratio: 1;
   overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
   cursor: pointer;
-  box-shadow: var(--shadow-md);
+  background: var(--navy-dark);
   border: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-item:hover img {
@@ -412,30 +467,146 @@ button {
 
 .gallery-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(13, 27, 42, 0.7);
+  inset: 0;
+  background: rgba(13, 27, 42, 0.6);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: var(--transition);
-  color: var(--gold-light);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  border: 2px solid transparent;
 }
 
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
-  border-color: var(--gold);
 }
 
-.see-more-container {
-  text-align: center;
-  margin-top: 5rem;
+.zoom-icon {
+  color: var(--navy-dark);
+  background: var(--gold);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  box-shadow: 0 10px 30px rgba(201, 168, 76, 0.4);
+  transition: var(--transition);
+}
+
+.gallery-item:hover .zoom-icon {
+  transform: scale(1);
+}
+
+/* Gallery Modal Lightbox */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(6, 15, 26, 0.98);
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 10100;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  opacity: 1;
+  color: var(--gold);
+  transform: rotate(90deg) scale(1.2);
+}
+
+.modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 1400px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10050;
+}
+
+.nav-btn.prev {
+  left: -2rem;
+}
+
+.nav-btn.next {
+  right: -2rem;
+}
+
+.nav-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-dark);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.4);
+}
+
+.modal-counter {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  background: rgba(13, 27, 42, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 0.6rem 1.8rem;
+  border-radius: 30px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  font-size: 0.9rem;
 }
 
 /* ========================================
@@ -706,6 +877,102 @@ button {
 }
 
 /* ========================================
+   SERVICES PAGE STYLES
+   ======================================== */
+.service-detail-section {
+  padding: 8rem 0;
+  background: var(--navy-dark);
+}
+
+.service-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+
+.service-nav .nav-pill {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  background: var(--navy-light);
+  color: var(--text-muted);
+  font-weight: 700;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  transition: var(--transition);
+}
+
+.service-nav .nav-pill:hover,
+.service-nav .nav-pill.active {
+  background: var(--gold);
+  color: var(--navy-dark);
+  border-color: var(--gold);
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+
+.service-detail-image {
+  height: 550px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-category {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.service-detail-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.service-detail-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.service-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.feature-item svg {
+  color: var(--gold);
+}
+
+/* ========================================
    RESPONSIVE - 1024px
    ======================================== */
 @media (max-width: 1024px) {
@@ -768,11 +1035,6 @@ button {
     height: 350px;
   }
 
-  .mobile-menu-btn {
-    display: block;
-    z-index: 1001;
-  }
-
   .nav-links {
     position: fixed;
     top: 0;
@@ -793,41 +1055,6 @@ button {
     right: 0;
   }
 
-  .nav-links li {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .nav-links.active li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .nav-links.active li:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-
-  .nav-links.active li:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-
-  .nav-links.active li:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-
-  .nav-links.active li:nth-child(4) {
-    transition-delay: 0.4s;
-  }
-
-  .nav-links.active li:nth-child(5) {
-    transition-delay: 0.5s;
-  }
-
-  .nav-links.active li:nth-child(6) {
-    transition-delay: 0.6s;
-  }
-
   .nav-links a {
     font-size: 2rem;
     font-weight: 800;
@@ -835,92 +1062,8 @@ button {
     color: var(--white);
   }
 
-  .nav-links a::after {
-    display: none;
-  }
-
-  .navbar.menu-open::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
-  }
-
-  .hero {
-    text-align: center;
-    padding-top: 100px;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    margin: 0 auto 3rem auto;
-  }
-
-  .coverage-island {
-    padding: 2rem 1.5rem;
-  }
-
-  .footer {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-
-  .footer-brand {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .footer .social-links {
-    justify-content: center;
-  }
-
-  .footer-section ul {
-    align-items: center;
-  }
-}
-
-/* ========================================
-   GOLD DECORATIVE ELEMENTS
-   ======================================== */
-
-/* Gold sparkle divider between sections */
-.gold-divider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  margin: 1rem auto;
-}
-
-/* Gold accent border animations */
-@keyframes goldShimmer {
-  0% {
-    background-position: -200% center;
-  }
-
-  100% {
-    background-position: 200% center;
-  }
-}
-
-.shimmer-border {
-  border-image: linear-gradient(90deg, transparent, var(--gold), transparent) 1;
-  animation: goldShimmer 3s linear infinite;
-}
-
-/* Subtle gold star decorations */
-.gold-star {
-  color: var(--gold);
-  text-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
 }

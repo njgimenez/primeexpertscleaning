@@ -12,7 +12,17 @@ const Hero = () => {
           className="hero-content"
           style={{ position: 'relative', zIndex: 2 }}
         >
-          <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+          <span style={{
+            color: 'var(--gold)',
+            fontWeight: '800',
+            textTransform: 'uppercase',
+            letterSpacing: '0.2em',
+            fontSize: '0.9rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            marginBottom: '1rem'
+          }}>
             ✦ Premium Cleaning Services ✦
           </span>
           <h1>
