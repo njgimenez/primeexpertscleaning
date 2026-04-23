@@ -42,17 +42,18 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services">
+    <section id="services" style={{ background: 'var(--navy)', padding: '8rem 0' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <h2 style={{ color: 'var(--navy)', fontSize: '2.5rem', marginBottom: '1rem' }}>Our Premium Services</h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-light)' }}>
+          <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>What We Offer</span>
+          <h2 style={{ color: 'var(--white)', fontSize: '2.5rem', marginBottom: '1rem' }}>Our Premium Services</h2>
+          <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-muted)' }}>
             We proudly offer a wide range of services to meet your needs, from routine maintenance to deep, detailed cleans.
           </p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

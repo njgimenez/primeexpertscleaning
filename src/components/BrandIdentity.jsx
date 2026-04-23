@@ -16,7 +16,7 @@ const BrandIdentity = () => {
           <p>
             At Prime Experts Cleaning LLC, we specialize in delivering high-end residential, commercial, and post-construction cleaning services. Our mission is to set the gold standard for cleanliness across Gilbert, Chandler, Mesa, and the entire East Valley.
           </p>
-          <div style={{ marginTop: '3rem', fontWeight: '800', color: 'var(--navy)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
+          <div style={{ marginTop: '3rem', fontWeight: '800', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
             Quality • Integrity • Excellence
           </div>
         </motion.div>
