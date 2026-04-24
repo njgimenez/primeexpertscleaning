@@ -114,7 +114,7 @@ const ServicesPage = () => {
             className="header-content"
           >
             <h1 style={{ fontFamily: 'var(--font-prata)', fontSize: '4rem', marginBottom: '1.5rem' }}>
-              <span className="accent-script" style={{ display: 'block', fontSize: '1.2em' }}>Excellence in every detail</span>
+              <span className="accent-script" style={{ display: 'block' }}>Excellence in every detail</span>
               Our Specialized Cleaning Services
               <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', margin: '1rem auto', width: '100%', maxWidth: '300px' }}>
                 <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>

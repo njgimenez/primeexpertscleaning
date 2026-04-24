@@ -37,8 +37,8 @@ const Hero = () => {
           <p style={{ textAlign: 'center', color: 'var(--text-light)', fontWeight: '500', maxWidth: '550px' }}>
             Experience the gold standard in cleanliness. We don't just clean; we restore, protect, and elevate your environment with unmatched precision.
           </p>
-          <div className="hero-btns" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
-            <a href="#contact" className="btn-primary">Start Your Experience</a>
+          <div className="hero-btns">
+            <a href="#contact" className="btn-primary">Book Now</a>
             <a href="#services" style={{ fontWeight: '800', color: 'var(--gold)', borderBottom: '3px solid var(--gold)', paddingBottom: '4px', transition: 'var(--transition)' }}>Explore Services</a>
           </div>
         </motion.div>

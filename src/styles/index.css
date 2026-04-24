@@ -83,6 +83,7 @@ h4 {
   color: var(--white);
   font-weight: 800;
   letter-spacing: -0.02em;
+  font-family: var(--font-prata);
 }
 
 .container {
@@ -1148,12 +1149,31 @@ button {
   }
 
   .hero-btns {
+    flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 2rem auto 0;
+  }
+
+  .hero-btns .btn-primary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-btns a:last-child {
+    font-size: 0.9rem;
+    width: fit-content;
+  }
+
+  .accent-script {
+    font-size: 1rem !important;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .about-image {
