@@ -50,7 +50,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" style={{ background: 'var(--navy)', padding: '8rem 0' }}>
+    <section id="services">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.2em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" style={{ background: 'var(--navy-dark)', color: 'white', padding: '8rem 0' }}>
+    <section id="contact">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>Contact Us</span>

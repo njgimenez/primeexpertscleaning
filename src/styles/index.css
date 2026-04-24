@@ -330,9 +330,14 @@ button {
 /* ========================================
    SERVICES - Dark cards with gold borders
    ======================================== */
+#services {
+  background: var(--navy);
+  padding: 8rem 0;
+}
+
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
 }
 
@@ -810,6 +815,8 @@ button {
    CONTACT - Deep navy with gold border
    ======================================== */
 #contact {
+  background: var(--navy-dark);
+  color: white;
   padding: 8rem 0;
 }
 
@@ -1098,7 +1105,9 @@ button {
   }
 
   .coverage-section,
-  .gallery-section {
+  .gallery-section,
+  #contact,
+  .about-section {
     padding: 5rem 0;
   }
 
@@ -1112,18 +1121,71 @@ button {
     font-size: 0.9rem;
   }
 
-  .about-section {
-    padding: 5rem 0;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
     text-align: center;
   }
 
+  .hero {
+    padding-top: 100px;
+    height: auto;
+    min-height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 .accent-script {
+    font-size: 1.1em;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btns {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
   .about-image {
     height: 350px;
+  }
+
+  .navbar .container {
+    padding: 0 1.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    z-index: 1001;
+    position: relative;
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .navbar.scrolled .logo img {
+    height: 45px;
+  }
+
+  .logo-full img {
+    max-width: 85%;
+    height: auto;
+  }
+
+  .logo-section {
+    padding: 4rem 0 0;
   }
 
   .nav-links {
@@ -1151,6 +1213,28 @@ button {
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--white);
+  }
+
+  .coverage-section,
+  .gallery-section,
+  #contact,
+  #services,
+  .about-section {
+    padding: 4rem 1rem;
+  }
+
+  .logo-full img {
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  }
+
+  .logo-section {
+    padding: 4rem 1rem 0;
+  }
+
+  .mountain-divider svg {
+    height: 40px;
   }
 
   .footer-grid {
