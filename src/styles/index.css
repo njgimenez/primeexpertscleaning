@@ -1098,6 +1098,10 @@ button {
    ======================================== */
 @media (max-width: 768px) {
   .section-title {
+    font-size: 2.2rem;
+  }
+
+  .page-header h1 {
     font-size: 2.5rem;
   }
 
@@ -1171,10 +1175,6 @@ button {
 
   .accent-script {
     font-size: 1.3rem !important;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
   }
 
   .about-image {
