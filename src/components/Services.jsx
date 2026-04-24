@@ -57,8 +57,8 @@ const Services = () => {
             What We Offer
           </span>
           <h2 style={{ color: 'var(--white)', fontSize: '3.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-prata)' }}>
-            <span className="accent-script" style={{ display: 'block' }}>Crafting excellence</span>
-            Our Premium Services
+            <span className="accent-script" style={{ display: 'block', fontSize: '2em' }}>Crafting excellence</span>
+            <span className="accent-script" style={{ display: 'block', fontSize: '2em' }}>Our Premium Services</span>
             <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', margin: '1rem auto', width: '100%', maxWidth: '250px' }}>
               <span style={{ flex: 1, height: '1px', background: 'var(--gold)', opacity: 0.5 }}></span>
               <span style={{ color: 'var(--gold)', fontSize: '1.3rem' }}>✦</span>

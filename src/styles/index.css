@@ -208,6 +208,7 @@ button {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 10px 30px -10px rgba(201, 168, 76, 0.5);
   display: inline-block;
+  text-align: center;
   border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
@@ -1170,11 +1171,12 @@ button {
 
   .hero-btns a:last-child {
     font-size: 0.9rem;
-    width: fit-content;
+    width: 100%;
+    text-align: center;
   }
 
   .accent-script {
-    font-size: 1.3rem !important;
+    font-size: 1.5em !important;
   }
 
   .about-image {
