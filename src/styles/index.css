@@ -1151,6 +1151,7 @@ button {
   .hero-btns {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1.25rem;
     width: 100%;
     max-width: 320px;
@@ -1169,7 +1170,7 @@ button {
   }
 
   .accent-script {
-    font-size: 1rem !important;
+    font-size: 1.3rem !important;
   }
 
   .section-title {
