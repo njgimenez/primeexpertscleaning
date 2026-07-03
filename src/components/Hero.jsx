@@ -35,7 +35,7 @@ const Hero = () => {
             </span>
           </h1>
           <p style={{ textAlign: 'center', color: 'var(--text-light)', fontWeight: '500', maxWidth: '550px' }}>
-            Experience the gold standard in cleanliness. We don't just clean; we restore, protect, and elevate your environment with unmatched precision.
+            Experience the gold standard in cleanliness. We don&apos;t just clean; we restore, protect, and elevate your environment with unmatched precision.
           </p>
           <div className="hero-btns">
             <a href="#contact" className="btn-primary">Book Now</a>

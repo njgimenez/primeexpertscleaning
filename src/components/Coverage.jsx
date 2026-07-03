@@ -24,7 +24,7 @@ const Coverage = () => {
             <div className="section-header">
               <span className="section-pretitle">Service Areas</span>
               <h2 className="section-title">Serving the Entire Valley</h2>
-              <p className="section-subtitle">Professional care for Arizona's most prestigious communities.</p>
+              <p className="section-subtitle">Professional care for Arizona&apos;s most prestigious communities.</p>
             </div>
 
             <div className="cities-grid">
