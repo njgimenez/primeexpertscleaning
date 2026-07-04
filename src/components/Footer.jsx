@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>Prime Experts</h3>
+            <img
+              className="footer-logo"
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Prime Experts Cleaning LLC"
+            />
             <p>Premium cleaning services in Arizona. Bringing prestige and professional care to your home and business.</p>
           </div>
           <div className="footer-section">

@@ -10,6 +10,7 @@ import Coverage from './components/Coverage'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ServicesPage from './pages/ServicesPage'
+import ServiceDetailPage from './pages/ServiceDetailPage'
 import ScrollToTop from './components/ScrollToTop'
 
 const Home = () => (
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetailPage />} />
         </Routes>
       </main>
       <Footer />

@@ -1,27 +1,26 @@
 import React from 'react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ color: 'var(--gold)', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>Contact Us</span>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--white)' }}>Get a Free Quote</h2>
-          <p style={{ opacity: 0.7, color: 'var(--text-muted)' }}>Fill out the form below and we&apos;ll get back to you shortly.</p>
-        </div>
-        <div style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--navy-light)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', minHeight: '600px', border: '1px solid rgba(201, 168, 76, 0.15)' }}>
-          {/* Jotform Embed Placeholder */}
-          <iframe
-            id="JotFormIFrame-placeholder"
-            title="Cleaning Service Request"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowFullScreen="true"
-            src="https://form.jotform.com/240915647563059" // Example Jotform ID, user will update
-            frameBorder="0"
-            style={{ width: '100%', minHeight: '600px', border: 'none' }}
-            scrolling="no"
-          >
-          </iframe>
+        <div className="contact-panel">
+          <div className="section-header contact-header">
+            <span className="section-pretitle">Contact Us</span>
+            <h2 className="section-title">Get a Free Quote</h2>
+            <p className="section-subtitle">Tell us what you need and our team will help you plan the right cleaning service.</p>
+          </div>
+          <div className="contact-options" aria-label="Contact information">
+            <a className="contact-option" href="mailto:primeexperts@primeexpertscleaning.com">
+              <Mail size={22} />
+              <span>primeexperts@primeexpertscleaning.com</span>
+            </a>
+            <div className="contact-option">
+              <MapPin size={22} />
+              <span>Gilbert, Chandler, Mesa, Tempe, Scottsdale and Queen Creek</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

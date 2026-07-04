@@ -14,7 +14,7 @@ const BrandIdentity = () => {
             viewport={{ once: true }}
             className="logo-full"
           >
-            <img src={`${import.meta.env.BASE_URL}logo.jpeg`} alt="Prime Experts Cleaning LLC" />
+            <img src={`${import.meta.env.BASE_URL}logo-blanco.png`} alt="Prime Experts Cleaning LLC" />
           </motion.div>
         </div>
 
