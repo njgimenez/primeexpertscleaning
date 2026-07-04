@@ -25,6 +25,7 @@ const Navbar = () => {
       <div className="container nav-content">
         <Link to="/" className="logo" onClick={handleNavClick}>
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Prime Experts Cleaning LLC" />
+          <span className="mobile-logo-text">Prime Experts Cleaning</span>
         </Link>
 
         {/* Mobile Menu Button */}

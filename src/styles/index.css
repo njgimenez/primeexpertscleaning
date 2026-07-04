@@ -158,6 +158,10 @@ button {
   display: block;
 }
 
+.mobile-logo-text {
+  display: none;
+}
+
 .navbar.scrolled .logo img {
   height: 54px;
 }
@@ -1009,8 +1013,15 @@ button.hcp-button {
   color: var(--text-light);
   display: flex;
   gap: 0.85rem;
+  min-width: 0;
   min-height: 74px;
   padding: 1rem 1.25rem;
+}
+
+.contact-option span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-option svg {
@@ -1735,6 +1746,17 @@ button.hcp-button {
     font-size: 0.95rem;
   }
 
+  .hero-btns .hcp-button,
+  .service-action .hcp-button,
+  .service-hero-actions .hcp-button,
+  .service-cta-band .hcp-button,
+  .sidebar-card .hcp-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
   .hero-btns a:last-child {
     font-size: 0.9rem;
     width: 100%;
@@ -1772,6 +1794,7 @@ button.hcp-button {
   .contact-option {
     align-items: flex-start;
     font-size: 0.95rem;
+    width: 100%;
   }
 
   .about-image {
@@ -1780,6 +1803,10 @@ button.hcp-button {
 
   .navbar .container {
     padding: 0 1.5rem;
+  }
+
+  .nav-content {
+    position: relative;
   }
 
   .mobile-menu-btn {
@@ -1796,6 +1823,27 @@ button.hcp-button {
 
   .logo img {
     height: 46px;
+  }
+
+  .logo {
+    align-items: center;
+    display: flex;
+    gap: 0.7rem;
+    min-width: 0;
+  }
+
+  .mobile-logo-text {
+    color: var(--white);
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    left: 50%;
+    line-height: 1.1;
+    max-width: 220px;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
   }
 
   .navbar.scrolled .logo img {
@@ -1902,6 +1950,8 @@ button.hcp-button {
     color: var(--navy-dark) !important;
     justify-content: center;
     margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .nav-dropdown {
@@ -1966,5 +2016,26 @@ button.hcp-button {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 220px;
+  }
+
+  .footer-section ul,
+  .footer-contact,
+  .footer .social-links {
+    align-items: center;
+  }
+
+  .footer-section ul li a:hover {
+    padding-left: 0;
   }
 }
